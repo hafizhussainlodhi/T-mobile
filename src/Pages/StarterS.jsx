@@ -11,7 +11,7 @@ export default function StartS() {
     return (
         <main className="max-w-xl mx-auto relative h-dvh w-full overflow-hidden bg-white flex flex-col items-center">
             {/* Header */}
-            {/* <div className="w-full flex items-center justify-between px-4 border-b border-gray-100 shadow-md shadow-gray-200  py-3 z-20">
+            <div className="w-full flex items-center justify-between px-4 border-b border-gray-100 shadow-md shadow-gray-200  py-3 z-20">
                 <img
                     src="/assets/logo.png"
                     alt="Logo"
@@ -22,7 +22,7 @@ export default function StartS() {
                     <LanguageSelector />
                     <ShoppingBagIcon className="w-6 h-6" />
                 </div>
-            </div> */}
+            </div>
 
             {/* Logo */}
             <div className="relative z-10 text-center mt-28">
