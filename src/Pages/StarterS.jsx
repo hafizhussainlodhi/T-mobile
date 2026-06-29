@@ -12,11 +12,13 @@ export default function StartS() {
         <main className="max-w-xl mx-auto relative h-dvh w-full overflow-hidden bg-white flex flex-col items-center">
             {/* Header */}
             <div className="w-full flex items-center justify-between px-4 border-b border-gray-100 shadow-md shadow-gray-200  py-3 z-20">
-                <img
-                    src="/assets/logo.png"
-                    alt="Logo"
-                    className="h-10 object-contain"
-                />
+                <Link to="/">
+                    <img
+                        src="/assets/logo.png"
+                        alt="Logo"
+                        className="h-10 object-contain"
+                    />
+                </Link>
 
                 <div className="flex items-center gap-4">
                     <LanguageSelector />
