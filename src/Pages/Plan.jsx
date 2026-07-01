@@ -48,7 +48,7 @@ export default function Plan() {
 
             <section className="flex-1 flex flex-col px-6 min-h-0">
                 <h1 className="mt-14 text-2xl font-semibold text-center">
-                    Refill Flow
+
                 </h1>
 
                 <div className="text-center mt-2">

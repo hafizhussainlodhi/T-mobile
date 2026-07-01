@@ -8,7 +8,7 @@ export default function CheckComp() {
 
     return (
         <main className="max-w-xl mx-auto h-dvh w-full overflow-y-auto bg-white flex flex-col items-center relative custom-scrollbar">
-            
+
             {/* Header */}
             <div className="w-full flex items-center justify-between px-4 border-b border-gray-100 shadow-md shadow-gray-200 py-3 sticky top-0 bg-white z-20">
                 <Link to="/">
@@ -22,8 +22,8 @@ export default function CheckComp() {
 
             {/* Content */}
             <section className="flex-1 flex flex-col items-center text-center px-6 z-10 w-full pt-6">
-                <h1 className="text-2xl font-semibold">Refill Flow</h1>
-                
+                <h1 className="text-2xl font-semibold"></h1>
+
                 <div className="mt-8">
                     <p className="text-xl">Let's Check</p>
                     <h2 className="text-2xl font-semibold leading-tight text-[#E00171]">Your Device Compatibility</h2>
@@ -38,11 +38,11 @@ export default function CheckComp() {
                 {/* IMEI Input Section */}
                 <div className="mt-6 mb-6 w-full max-w-[300px] rounded-2xl bg-[#fff0f7] border border-[#E00171]/20 p-6 shadow-sm">
                     <p className="text-[20px] font-bold text-gray-800 uppercase tracking-widest mb-3">CHECK YOUR DEVICE COMPATIBILITY</p>
-                    <input 
-                        type="text" 
+                    <input
+                        type="text"
                         defaultValue="21902459038459032948"
                         readOnly
-                        className="w-full bg-white border border-gray-200 rounded-full px-4 py-3 text-[12px] text-center mb-4 focus:outline-none cursor-default" 
+                        className="w-full bg-white border border-gray-200 rounded-full px-4 py-3 text-[12px] text-center mb-4 focus:outline-none cursor-default"
                     />
                     <button
                         onClick={() => setShowSuccess(true)}
@@ -56,14 +56,14 @@ export default function CheckComp() {
             {/* Bottom Buttons Section */}
             <div className="mt-auto mb-8 w-full max-w-[300px] z-10">
                 <div className="grid grid-cols-2 gap-3">
-                    <button 
-                        onClick={() => window.history.back()} 
+                    <button
+                        onClick={() => window.history.back()}
                         className="h-10 rounded-full border border-black px-4 text-xs font-semibold flex items-center justify-center gap-2"
                     >
                         <ArrowLeft className="w-4 h-4" /> Back
                     </button>
-                    <Link 
-                        to="/plan" 
+                    <Link
+                        to="/plan"
                         className="h-10 rounded-full bg-[#E00171] text-white text-xs font-semibold flex items-center justify-center hover:bg-[#c20162]"
                     >
                         Skip
@@ -86,8 +86,8 @@ export default function CheckComp() {
                             <h2 className="text-xl font-semibold tracking-tight text-slate-900">YOUR PHONE ESIM IS COMPATIBLE</h2>
                             <p className="mt-4 text-sm text-slate-500">IMEI: 21902459038459032948</p>
                         </div>
-                        <button 
-                            onClick={() => setShowSuccess(false)} 
+                        <button
+                            onClick={() => setShowSuccess(false)}
                             className="mt-8 w-full rounded-full bg-[#E00171] px-4 py-3 text-sm font-semibold text-white hover:bg-[#c20162]"
                         >
                             CLOSE
