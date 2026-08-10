@@ -37,19 +37,19 @@ export default function Info() {
 
                         {/* Content */}
                         <div className="p-4 text-md font-normal leading-5 text-gray-700 space-y-4">
-                            <p>
-                                • This Product Is NON-REFUNDABLE.
+                            <p className="leading-6">
+                                This Product Is NON-REFUNDABLE.
                             </p>
 
-                            <p>
-                                • You May Be Able To Lower The Monthly Cost Of
+                            <p className="leading-6">
+                                You May Be Able To Lower The Monthly Cost Of
                                 Your Wireless Service If You Are Eligible For
                                 The Federal Government's Affordable Connectivity
                                 Program.
                             </p>
 
-                            <p>
-                                • <strong>T-Mobile PREPAID Service</strong> Is Subject
+                            <p className="leading-6">
+                                T-Mobile PrePaid Service Is Subject
                                 To The T-Mobile Consumer Service Agreement (Agreement)
                                 located at att.com/ConsumerServiceAgreement.
                                 Activation and/or use of T-Mobile PREPAID service
@@ -57,21 +57,9 @@ export default function Info() {
                                 includes dispute resolution by binding arbitration.
                                 T-Mobile PREPAID cards and other account payments are
                                 nontransferable and nonrefundable. See
-                                att.com/broadbandinfo for information on T-Mobile
+                                att.com/broadband info for information on T-Mobile
                                 network management practices.
                             </p>
-
-                            {/* Demo long content */}
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit. Voluptates, suscipit. Lorem ipsum dolor sit
-                                amet consectetur adipisicing elit. Voluptates,
-                                suscipit.
-                            </p>
-
-                            <button className="text-gray-500 font-semibold text-xs">
-                                More...
-                            </button>
                         </div>
                     </div>
                 </div>
@@ -79,7 +67,7 @@ export default function Info() {
 
             {/* Fixed Footer */}
             <div className="shrink-0 bg-white border-t border-gray-100 px-6 py-4">
-                <div className="max-w-[300px] mx-auto grid grid-cols-2 gap-3">
+                <div className="max-w-75 mx-auto grid grid-cols-2 gap-3">
                     <button
                         onClick={() => window.history.back()}
                         className="h-10 rounded-full border border-black px-4 text-xs font-semibold flex items-center justify-center gap-2"
