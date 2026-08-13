@@ -1,8 +1,10 @@
 import { ArrowLeft, ShoppingBagIcon } from "lucide-react";
 import LanguageSelector from "../components/LanguageSelector";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 export default function Info() {
+    const [simType, setSimType] = useState("esim");
     return (
         <main className="max-w-xl mx-auto h-dvh bg-white flex flex-col overflow-hidden">
 
@@ -38,88 +40,118 @@ export default function Info() {
                     </div>
 
                     <div className="mt-6 space-y-3">
-                       <div className="w-full">
+
+                        {/* SIM Type */}
+                        <div className="w-full">
                             <select
                                 name="simType"
-                                defaultValue=""
+                                value={simType}
+                                onChange={(e) => setSimType(e.target.value)}
                                 className="h-10 w-full rounded border border-gray-300 bg-transparent px-3 text-xs outline-none focus:border-(--primary-color)"
                                 required
                             >
-                                <option value="" disabled>
-                                    Select SIM Type
-                                </option>
-                                <option value="physical-sim">
-                                    Physical SIM
-                                </option>
                                 <option value="esim">
                                     eSIM
+                                </option>
+
+                                <option value="physical-sim">
+                                    Physical SIM
                                 </option>
                             </select>
                         </div>
 
-                        <input
-                            type="text"
-                            placeholder="SIM No"
-                            className="w-full h-10 rounded border border-gray-300 px-3 text-xs bg-transparent"
-                        />
 
+                        {/* SIM Number — only for Physical SIM */}
+                        {simType === "physical-sim" && (
+                            <input
+                                type="text"
+                                name="simNo"
+                                placeholder="SIM No"
+                                className="h-10 w-full rounded border border-gray-300 bg-transparent px-3 text-xs"
+                            />
+                        )}
+
+
+                        {/* Name */}
                         <div className="grid grid-cols-2 gap-3">
                             <input
                                 type="text"
+                                name="firstName"
                                 placeholder="First Name"
-                                className="h-10 rounded border border-gray-300 px-3 text-xs bg-transparent"
+                                className="h-10 rounded border border-gray-300 bg-transparent px-3 text-xs"
                             />
 
                             <input
                                 type="text"
+                                name="lastName"
                                 placeholder="Last Name"
-                                className="h-10 rounded border border-gray-300 px-3 text-xs bg-transparent"
+                                className="h-10 rounded border border-gray-300 bg-transparent px-3 text-xs"
                             />
                         </div>
 
+
+                        {/* Email */}
                         <input
                             type="email"
+                            name="email"
                             placeholder="Email"
-                            className="w-full h-10 rounded border border-gray-300 px-3 text-xs bg-transparent"
+                            className="h-10 w-full rounded border border-gray-300 bg-transparent px-3 text-xs"
                         />
 
+
+                        {/* Address */}
                         <input
                             type="text"
+                            name="address"
                             placeholder="Address"
-                            className="w-full h-10 rounded border border-gray-300 px-3 text-xs bg-transparent"
+                            className="h-10 w-full rounded border border-gray-300 bg-transparent px-3 text-xs"
                         />
 
+
+                        {/* City / State / Zip */}
                         <div className="grid grid-cols-3 gap-3">
+
                             <input
                                 type="text"
+                                name="city"
                                 placeholder="City"
-                                className="h-10 rounded border border-gray-300 px-3 text-xs bg-transparent"
+                                className="h-10 rounded border border-gray-300 bg-transparent px-3 text-xs"
                             />
 
                             <input
                                 type="text"
+                                name="state"
                                 placeholder="State"
-                                className="h-10 rounded border border-gray-300 px-3 text-xs bg-transparent"
+                                className="h-10 rounded border border-gray-300 bg-transparent px-3 text-xs"
                             />
 
                             <input
                                 type="text"
+                                name="zipCode"
                                 placeholder="Zip Code"
-                                className="h-10 rounded border border-gray-300 px-3 text-xs bg-transparent"
+                                className="h-10 rounded border border-gray-300 bg-transparent px-3 text-xs"
                             />
+
                         </div>
 
+
+                        {/* IMEI */}
                         <input
                             type="text"
+                            name="imei"
                             placeholder="IMEI"
-                            className="w-full h-10 rounded border border-gray-300 px-3 text-xs bg-transparent"
+                            className="h-10 w-full rounded border border-gray-300 bg-transparent px-3 text-xs"
                         />
 
+
+                        {/* Contact */}
                         <input
                             type="text"
+                            name="contact"
                             placeholder="Contact"
-                            className="w-full h-10 rounded border border-gray-300 px-3 text-xs bg-transparent"
+                            className="h-10 w-full rounded border border-gray-300 bg-transparent px-3 text-xs"
                         />
+
                     </div>
                 </div>
             </section>
