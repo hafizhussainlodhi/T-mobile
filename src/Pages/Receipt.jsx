@@ -42,17 +42,17 @@ export default function Receipt() {
 
                 <ReceiptSection title="Product Details">
                     <Row label="Carrier" value="T-Mobile" />
-                    <Row label="Plan" value="T-Mobile $35" />
+                    <Row label="Plan" value="T-Mobile $10" />
                     <Row label="Activation Date" value="03-03-2026" />
                     <Row label="SIM No." value="1111100000" />
                     <Row label="IMEI" value="9827772766166537388" />
                 </ReceiptSection>
 
                 <ReceiptSection title="Payment Summary">
-                    <Row label="Plan Amount" value="$35.00" />
+                    <Row label="Plan Amount" value="$10.00" />
                     <Row label="Add-On Amount" value="$0.00" />
-                    <Row label="Processing Fee" value="$4.76" />
-                    <Row label="Tax's & Fee" value="$4.76" />
+                    <Row label="Processing Fee" value="$00.00" />
+                    <Row label="Tax's & Fee" value="$00.00" />
                     <div className="border-t border-gray-200 mt-3 pt-3">
                         <Row label="Total" value="$44.00" total />
                     </div>

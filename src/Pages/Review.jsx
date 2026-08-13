@@ -47,7 +47,7 @@ export default function Review() {
 
                         <div className="flex justify-between mt-5 text-sm">
                             <span className="text-gray-500">YOUR PLAN</span>
-                            <span className="font-bold">T-Mobile $35</span>
+                            <span className="font-bold">$10 Connect by TMO 1GB</span>
                         </div>
                     </div>
                 </div>
@@ -63,16 +63,16 @@ export default function Review() {
                             <div className="w-28 rounded bg-white shadow-md p-3 text-center flex-shrink-0">
                                 <div className="text-(--primary-color) font-bold">
                                     <span className="text-xs align-top">$</span>
-                                    <span className="text-3xl">35</span>
+                                    <span className="text-3xl">10</span>
                                     <span className="text-[9px]">/mo</span>
                                 </div>
 
                                 <p className="text-[7px] font-semibold leading-tight">
-                                    30GB/mo. at max 3 Mbps, then speeds slowed to max 1.5 Mbps.
+                                    Get 1000 Talk & 1000 Text with up to 1GB of high speed data on T-Mobile's network to use virtually anywhere within the U.S.
                                 </p>
 
                                 <h3 className="text-[9px] font-bold mt-2">
-                                    Unlimited Saver
+                                    $10 Connect by TMO 1GB
                                 </h3>
                             </div>
 
@@ -80,14 +80,13 @@ export default function Review() {
                                 <div className="flex justify-between items-start">
                                     <div>
                                         <h3 className="text-xs font-bold">
-                                            T-Mobile $35 (Data Only)
+                                            $10 Connect by TMO 1GB
                                         </h3>
                                         <p className="text-[10px] text-gray-500">standard</p>
-                                        <p className="text-[10px] font-bold">15GB DATA ONLY</p>
                                     </div>
 
                                     <p className="text-(--primary-color) font-bold text-lg">
-                                        $35.00
+                                        $10.00
                                     </p>
                                 </div>
 
@@ -104,10 +103,10 @@ export default function Review() {
                 <div className="rounded-md border border-gray-200 shadow-md p-4">
                     <h2 className="font-bold text-sm mb-5">Purchase Overview</h2>
 
-                    <PriceRow label="Sub Total" value="$68.00" />
-                    <PriceRow label="Tax" value="$4.76" />
-                    <PriceRow label="Processing Fee" value="$4.76" />
-                    <PriceRow label="Total" value="$72.76" pink />
+                    <PriceRow label="Sub Total" value="$10.00" />
+                    <PriceRow label="Tax" value="$00.00" />
+                    <PriceRow label="Processing Fee" value="$00.00" />
+                    <PriceRow label="Total" value="$10.00" pink />
                 </div>
             </section>
 
