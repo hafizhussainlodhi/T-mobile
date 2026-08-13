@@ -43,17 +43,17 @@ const services = [
             "/assets/cubacel.png",
         ],
     },
-    {
-        title: "Buy Virtual Cards",
-        description: "Buy cards for your favorite services instantly.",
-        icon: CreditCard,
-        to: "/start-screen",
-        logos: [
-            "/assets/spotify.webp",
-            "/assets/netflix.png",
-            "/assets/hulu.webp",
-        ],
-    },
+    // {
+    //     title: "Buy Virtual Cards",
+    //     description: "Buy cards for your favorite services instantly.",
+    //     icon: CreditCard,
+    //     to: "/start-screen",
+    //     logos: [
+    //         "/assets/spotify.webp",
+    //         "/assets/netflix.png",
+    //         "/assets/hulu.webp",
+    //     ],
+    // },
 ];
 export default function StartS() {
     return (
