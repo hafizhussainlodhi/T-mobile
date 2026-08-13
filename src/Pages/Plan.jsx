@@ -213,10 +213,6 @@ export default function Plan() {
                             {selectedPlan.description}
                         </p>
 
-                        <button className="mt-3 text-left block text-xs font-bold text-blue-600 underline">
-                            Full Plan Details
-                        </button>
-
                         <div className="border-t border-gray-300 mt-4 pt-4 text-left space-y-3 text-sm">
                             <p>↕️ {selectedPlan.price === "5" ? "5GB" : "Data included with plan"}</p>
 
