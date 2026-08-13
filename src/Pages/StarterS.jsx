@@ -21,8 +21,8 @@ import {
 
 const services = [
     {
-        title: "Activar un nuevo plan",
-        description: "Activa tu línea en minutos con eSIM o SIM físico.",
+        title: "Activate a New Plan",
+        description: "Activate your line in minutes with eSIM or a physical SIM.",
         icon: Smartphone,
         to: "/check-compatibility",
         logos: [
@@ -32,8 +32,8 @@ const services = [
         ],
     },
     {
-        title: "Recargar tu teléfono",
-        description: "Añade saldo a tu plan actual al instante.",
+        title: "Recharge Your Phone",
+        description: "Add balance to your current plan instantly.",
         icon: BadgeDollarSign,
         to: "/recharge",
         logos: [
@@ -44,8 +44,8 @@ const services = [
         ],
     },
     {
-        title: "Compra tarjetas virtuales",
-        description: "Compra tarjetas para tus servicios favoritos al instante.",
+        title: "Buy Virtual Cards",
+        description: "Buy cards for your favorite services instantly.",
         icon: CreditCard,
         to: "/start-screen",
         logos: [
@@ -55,7 +55,6 @@ const services = [
         ],
     },
 ];
-
 export default function StartS() {
     return (
         <main className="max-w-xl mx-auto relative h-dvh w-full overflow-hidden bg-white flex flex-col items-center">

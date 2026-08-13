@@ -50,17 +50,34 @@ function LanguageSelector() {
 
         document.cookie = `googtrans=/en/${targetLang}; path=/`;
 
-        if (window.location.hostname !== "localhost") {
+        if (
+            window.location.hostname !== "localhost" &&
+            window.location.hostname !== "127.0.0.1"
+        ) {
             document.cookie =
                 `googtrans=/en/${targetLang}; path=/; domain=${window.location.hostname}`;
         }
 
-        localStorage.setItem("language", language.code);
+        localStorage.setItem(
+            "language",
+            targetLang.toUpperCase()
+        );
 
-        setLang(language.code);
-        setOpen(false);
+        const parts = window.location.pathname
+            .split("/")
+            .filter(Boolean);
 
-        window.location.reload();
+        const lastPart = parts[parts.length - 1];
+
+        if (lastPart === "en" || lastPart === "es") {
+            parts[parts.length - 1] = targetLang;
+        } else {
+            parts.push(targetLang);
+        }
+
+        const newPath = `/${parts.join("/")}`;
+
+        window.location.href = newPath;
     };
 
     return (
