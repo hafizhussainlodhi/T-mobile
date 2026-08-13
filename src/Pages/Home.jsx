@@ -15,8 +15,8 @@ import {
 
 const services = [
     {
-        title: "Activar un nuevo plan",
-        description: "Activa tu línea en minutos con eSIM o SIM físico.",
+        title: "Activate a New Plan",
+        description: "Activate your line in minutes with eSIM or a physical SIM.",
         icon: Smartphone,
         to: "/check-compatibility",
         logos: [
@@ -26,8 +26,8 @@ const services = [
         ],
     },
     {
-        title: "Recargar tu teléfono",
-        description: "Añade saldo a tu plan actual al instante.",
+        title: "Recharge Your Phone",
+        description: "Add balance to your current plan instantly.",
         icon: BadgeDollarSign,
         to: "/recharge",
         logos: [
@@ -38,8 +38,8 @@ const services = [
         ],
     },
     {
-        title: "Compra tarjetas virtuales",
-        description: "Compra tarjetas para tus servicios favoritos al instante.",
+        title: "Buy Virtual Cards",
+        description: "Buy cards for your favorite services instantly.",
         icon: CreditCard,
         to: "/start-screen",
         logos: [
@@ -73,11 +73,41 @@ export default function Home() {
             {/* Content */}
             <div className="flex-1 overflow-y-auto px-4 py-4">
 
-                <img
+                {/* <img
                     src="/assets/b-banner-4.png"
                     alt=""
                     className="w-full"
-                />
+                /> */}
+
+                <section className="px-3 py-4">
+                    <div className="relative mx-auto h-52 w-full max-w-130 overflow-hidden rounded-2xl bg-(--primary-color)">
+
+                        {/* Content */}
+                        <div className="relative z-10 flex h-full flex-col justify-center px-7">
+                            <h2 className="max-w-82 text-[28px] font-semibold leading-[1.2] text-white">
+                                Get Unlimited Plan
+                                <br />
+                                Starting at $30/mo
+                            </h2>
+
+                            {/* Features */}
+                            <div className="mt-10 flex items-center gap-2 text-[14px] font-medium text-white">
+                                <span>No Contact</span>
+                                <span className="h-6 w-px bg-white/70" />
+                                <span>Fast Activation</span>
+                                <span className="h-6 w-px bg-white/70" />
+                                <span>Top Network</span>
+                            </div>
+                        </div>
+
+                        {/* Boy + Phone Image */}
+                        <img
+                            src="/assets/banner.png"
+                            alt=""
+                            className="absolute bottom-0 right-0 z-20 h-53 w-auto object-contain"
+                        />
+                    </div>
+                </section>
 
                 <section className="mt-4 space-y-3">
                     {services.map((service) => {
@@ -133,7 +163,7 @@ export default function Home() {
                             </Link>
                         );
                     })}
-                </section>               
+                </section>
 
                 <div className="flex items-center justify-center md:gap-12 mt-5 gap-2">
                     <img src="/assets/amex.png" alt="" className="h-8" />
