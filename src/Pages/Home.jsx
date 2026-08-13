@@ -50,17 +50,18 @@ const services = [
     // },
 ];
 
+
 export default function Home() {
     return (
-        <main className="max-w-xl mx-auto h-dvh overflow-hidden bg-white flex flex-col">
+        <main className="max-w-xl mx-auto h-dvh bg-white flex flex-col overflow-hidden">
 
-            {/* App Header */}
-            <header className="flex items-center justify-between px-4 py-3 border-b border-gray-100 shadow-md shadow-gray-200">
+            <header className="w-full flex items-center justify-between px-4 py-3 border-b border-gray-100 shadow-md shadow-gray-200 shrink-0">
+
                 <Link to="/">
                     <img
                         src="/assets/logo.png"
                         alt="Logo"
-                        className="h-10 object-contain"
+                        className="h-10 w-auto object-contain"
                     />
                 </Link>
 
@@ -68,22 +69,18 @@ export default function Home() {
                     <LanguageSelector />
                     <ShoppingBagIcon className="w-6 h-6" />
                 </div>
+
             </header>
 
-            {/* Content */}
-            <div className="flex-1 overflow-y-auto px-4 py-4">
-
-                {/* <img
-                    src="/assets/b-banner-4.png"
-                    alt=""
-                    className="w-full"
-                /> */}
+            <section className="flex-1 min-h-0 overflow-y-auto px-4 py-4">
 
                 <section className="px-3 py-4">
-                    <div className="relative mx-auto h-52 w-full max-w-130 overflow-hidden rounded-2xl bg-(--primary-color)">
 
-                        {/* Content */}
+                    <div className="relative mx-auto h-52 w-full overflow-hidden rounded-2xl bg-(--primary-color)">
+
+                        {/* Banner Content */}
                         <div className="relative z-10 flex h-full flex-col justify-center px-7">
+
                             <h2 className="max-w-82 text-[28px] font-semibold leading-[1.2] text-white">
                                 Get Unlimited Plan
                                 <br />
@@ -91,46 +88,84 @@ export default function Home() {
                             </h2>
 
                             {/* Features */}
-                            <div className="mt-10 flex items-center gap-2 text-[14px] font-medium text-white">
+                            <div className="mt-10 flex flex-wrap items-center gap-2 text-[14px] font-medium text-white">
+
                                 <span>No Contact</span>
+
                                 <span className="h-6 w-px bg-white/70" />
+
                                 <span>Fast Activation</span>
+
                                 <span className="h-6 w-px bg-white/70" />
+
                                 <span>Top Network</span>
+
                             </div>
+
                         </div>
 
-                        {/* Boy + Phone Image */}
+
+                        {/* Boy + Phone */}
                         <img
                             src="/assets/banner.png"
                             alt=""
                             className="absolute bottom-0 right-0 z-20 h-53 w-auto object-contain"
                         />
+
                     </div>
+
                 </section>
 
+
+                {/* ==================== SERVICES ==================== */}
                 <section className="mt-4 space-y-3">
+
                     {services.map((service) => {
+
                         const Icon = service.icon;
 
                         return (
                             <Link
                                 key={service.title}
                                 to={service.to}
-                                className="group grid min-h-29 grid-cols-[76px_1fr_45px] items-center rounded-2xl border border-gray-200 bg-white px-3 py-3 shadow-[0_5px_16px_rgba(0,0,0,0.08)] transition duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+                                className="
+                                    group
+                                    grid
+                                    min-h-29
+                                    grid-cols-[76px_minmax(0,1fr)_45px]
+                                    items-center
+                                    rounded-2xl
+                                    border
+                                    border-gray-200
+                                    bg-white
+                                    px-3
+                                    py-3
+                                    shadow-[0_5px_16px_rgba(0,0,0,0.08)]
+                                    transition
+                                    duration-300
+                                    hover:-translate-y-0.5
+                                    hover:shadow-lg
+                                "
                             >
+
                                 {/* Icon */}
                                 <div className="flex h-full items-center justify-center border-r border-gray-200 pr-3">
-                                    <div className="flex h-14 w-14 items-center justify-center rounded-full bg-(--primary-color) shadow-[0_5px_8px_rgba(185,0,0,0.25)]">
+
+                                    <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-(--primary-color) shadow-[0_5px_8px_rgba(185,0,0,0.25)]">
+
                                         <Icon
                                             strokeWidth={1.8}
                                             className="h-8 w-8 text-white"
                                         />
+
                                     </div>
+
                                 </div>
+
 
                                 {/* Text */}
                                 <div className="min-w-0 px-4">
+
                                     <h2 className="text-[16px] font-bold text-gray-950">
                                         {service.title}
                                     </h2>
@@ -139,7 +174,9 @@ export default function Home() {
                                         {service.description}
                                     </p>
 
-                                    {/* <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-2">
+                                    {/* Logos — kept exactly from your original */}
+                                    {/* 
+                                    <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-2">
                                         {service.logos.map((logo) => (
                                             <img
                                                 key={logo}
@@ -148,82 +185,143 @@ export default function Home() {
                                                 className="max-h-8 max-w-16 object-contain"
                                             />
                                         ))}
-                                    </div> */}
+                                    </div>
+                                    */}
+
                                 </div>
+
 
                                 {/* Arrow */}
                                 <div className="flex items-center justify-center">
-                                    <span className="flex h-9 w-9 items-center justify-center rounded-full bg-(--primary-color) text-white shadow-md transition group-hover:translate-x-1">
+
+                                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-(--primary-color) text-white shadow-md transition group-hover:translate-x-1">
+
                                         <ArrowRight
                                             strokeWidth={3}
                                             className="h-5 w-5"
                                         />
+
                                     </span>
+
                                 </div>
+
                             </Link>
                         );
+
                     })}
+
                 </section>
 
-                <div className="flex items-center justify-center md:gap-12 mt-5 gap-2">
-                    <img src="/assets/amex.png" alt="" className="h-8" />
-                    <img src="/assets/visa.png" alt="" className="h-8" />
-                    <img src="/assets/a-pay.png" alt="" className="h-8" />
-                    <img src="/assets/g-pay.png" alt="" className="h-8" />
-                    <img src="/assets/m-card.png" alt="" className="h-8" />
+            </section>
+
+
+            {/* ==================================================
+                FIXED BOTTOM AREA — ALWAYS VISIBLE
+            ================================================== */}
+            <footer className="shrink-0 border-t border-gray-100 bg-white px-4 py-3">
+
+                {/* ==================== PAYMENT LOGOS ==================== */}
+                <div className="flex items-center justify-center gap-3 sm:gap-6">
+
+                    <img
+                        src="/assets/amex.png"
+                        alt=""
+                        className="h-7 w-auto"
+                    />
+
+                    <img
+                        src="/assets/visa.png"
+                        alt=""
+                        className="h-7 w-auto"
+                    />
+
+                    <img
+                        src="/assets/a-pay.png"
+                        alt=""
+                        className="h-7 w-auto"
+                    />
+
+                    <img
+                        src="/assets/g-pay.png"
+                        alt=""
+                        className="h-7 w-auto"
+                    />
+
+                    <img
+                        src="/assets/m-card.png"
+                        alt=""
+                        className="h-7 w-auto"
+                    />
+
                 </div>
 
 
-                <section className="hidden md:block px-4 py-4 mt-5 shadow-xl border border-gray-300 rounded-xl">
-                    <div className="grid grid-cols-4 flex-row items-center justify-between divide-x divide-gray-300">
+                {/* ==================== DESKTOP FEATURES ==================== */}
+                <section className="hidden md:block mt-4 rounded-xl border border-gray-300 px-4 py-4 shadow-xl">
 
-                        <div className="flex flex-row items-center justify-center gap-2">
-                            <div className="w-9 h-9 rounded-full bg-(--primary-color) flex items-center justify-center shrink-0">
-                                <Zap className="w-5 h-5 text-white" />
+                    <div className="grid grid-cols-4 items-center divide-x divide-gray-300">
+
+                        {/* Take less */}
+                        <div className="flex items-center justify-center gap-2">
+
+                            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-(--primary-color)">
+                                <Zap className="h-5 w-5 text-white" />
                             </div>
-                            <div>
-                                <h3 className="text-xs font-semibold">
-                                    Take less
-                                </h3>
-                            </div>
+
+                            <h3 className="text-xs font-semibold">
+                                Take less
+                            </h3>
+
                         </div>
 
-                        <div className="flex flex-row items-center justify-center gap-2">
-                            <div className="w-9 h-9 rounded-full bg-(--primary-color) flex items-center justify-center shrink-0">
-                                <ShieldCheck className="w-5 h-5 text-white" />
+
+                        {/* Secure */}
+                        <div className="flex items-center justify-center gap-2">
+
+                            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-(--primary-color)">
+                                <ShieldCheck className="h-5 w-5 text-white" />
                             </div>
-                            <div>
-                                <h3 className="text-xs font-semibold">
-                                    Secure
-                                </h3>
-                            </div>
+
+                            <h3 className="text-xs font-semibold">
+                                Secure
+                            </h3>
+
                         </div>
 
-                        <div className="flex flex-row items-center justify-center gap-2">
-                            <div className="w-9 h-9 rounded-full bg-(--primary-color) flex items-center justify-center shrink-0">
-                                <RadioTower className="w-5 h-5 text-white" />
+
+                        {/* Carrier */}
+                        <div className="flex items-center justify-center gap-2">
+
+                            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-(--primary-color)">
+                                <RadioTower className="h-5 w-5 text-white" />
                             </div>
-                            <div>
-                                <h3 className="text-xs font-semibold">
-                                    Carrier
-                                </h3>
-                            </div>
+
+                            <h3 className="text-xs font-semibold">
+                                Carrier
+                            </h3>
+
                         </div>
 
-                        <div className="flex flex-row items-center justify-center gap-2">
-                            <div className="w-9 h-9 rounded-full bg-(--primary-color) flex items-center justify-center shrink-0">
-                                <Headset className="w-5 h-5 text-white" />
+
+                        {/* Support */}
+                        <div className="flex items-center justify-center gap-2">
+
+                            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-(--primary-color)">
+                                <Headset className="h-5 w-5 text-white" />
                             </div>
-                            <div>
-                                <h3 className="text-xs font-semibold">
-                                    Support
-                                </h3>
-                            </div>
+
+                            <h3 className="text-xs font-semibold">
+                                Support
+                            </h3>
+
                         </div>
+
                     </div>
+
                 </section>
 
-            </div>
+            </footer>
+
         </main>
     );
 }
