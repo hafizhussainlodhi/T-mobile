@@ -38,11 +38,24 @@ export default function Info() {
                     </div>
 
                     <div className="mt-6 space-y-3">
-                        <input
-                            type="text"
-                            placeholder="Physical SIM"
-                            className="w-full h-10 rounded border border-gray-300 px-3 text-xs bg-transparent"
-                        />
+                       <div className="w-full">
+                            <select
+                                name="simType"
+                                defaultValue=""
+                                className="h-10 w-full rounded border border-gray-300 bg-transparent px-3 text-xs outline-none focus:border-(--primary-color)"
+                                required
+                            >
+                                <option value="" disabled>
+                                    Select SIM Type
+                                </option>
+                                <option value="physical-sim">
+                                    Physical SIM
+                                </option>
+                                <option value="esim">
+                                    eSIM
+                                </option>
+                            </select>
+                        </div>
 
                         <input
                             type="text"
