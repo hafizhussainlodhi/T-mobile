@@ -67,3 +67,27 @@ html, body {
   scrollbar-width: thin;
   scrollbar-color: #E00171 #f3f4f6;
 }
+
+
+
+/* Google Translate cleanup */
+
+.goog-te-banner-frame.skiptranslate,
+iframe.goog-te-banner-frame,
+body>.skiptranslate {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
+
+#goog-gt-tt,
+.goog-te-balloon-frame {
+  display: none !important;
+}
+
+.goog-text-highlight {
+  background: transparent !important;
+  box-shadow: none !important;
+}

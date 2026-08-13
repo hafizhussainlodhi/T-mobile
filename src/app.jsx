@@ -21,7 +21,8 @@ import Recharge from "./Pages/Recharge";
 import AddInfo from "./Pages/AddInfo";
 import RTerm from "./Pages/RTerm";
 import RReview from "./Pages/RReview";
-
+import GoogleTranslate from "../GoogleTranslate";
+// import GoogleTranslate from "./GoogleTranslate";
 
 function App() {
     const location = useLocation();
@@ -29,6 +30,8 @@ function App() {
     return (
         <>
             <ScrollToTop />
+
+            <GoogleTranslate />
 
             {/* <Header /> */}
 
